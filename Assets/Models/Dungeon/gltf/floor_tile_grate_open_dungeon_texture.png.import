@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gnyir5ovwna5"
+uid="uid://mvyklr5jeog0"
 path.s3tc="res://.godot/imported/floor_tile_grate_open_dungeon_texture.png-d6a2d692f44744670336ee07a8502508.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

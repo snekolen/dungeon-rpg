@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2o300qt2iuym"
+uid="uid://cx87auitwhl21"
 path.s3tc="res://.godot/imported/keyring_dungeon_texture.png-771f8e917f3bc117a7c3bf8c15258dc4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

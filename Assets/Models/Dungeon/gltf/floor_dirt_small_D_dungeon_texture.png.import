@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dotwcn08anbys"
+uid="uid://by6audxo3dnf1"
 path.s3tc="res://.godot/imported/floor_dirt_small_D_dungeon_texture.png-29794cb53e06e4180c0a4cf3f44586db.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

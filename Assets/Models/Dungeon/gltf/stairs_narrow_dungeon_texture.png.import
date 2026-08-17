@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8vk0bcxqy1bx"
+uid="uid://bqxafapqvfe8u"
 path.s3tc="res://.godot/imported/stairs_narrow_dungeon_texture.png-ed544005a4ea78d489809c8a7ba21383.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

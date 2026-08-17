@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx4iqm5l1i3nr"
+uid="uid://dw1hq37kfl20p"
 path.s3tc="res://.godot/imported/wall_corner_small_dungeon_texture.png-005a74987cd3733e792cd63e7e9159f2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

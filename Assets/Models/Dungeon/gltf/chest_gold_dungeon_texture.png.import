@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ern1fdf04wh"
+uid="uid://brkej863i543f"
 path.s3tc="res://.godot/imported/chest_gold_dungeon_texture.png-c233abcd4c4178bff31ca20feca14147.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

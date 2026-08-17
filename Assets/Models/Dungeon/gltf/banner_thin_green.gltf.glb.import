@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ba0lg6r50ddnb"
+uid="uid://bipo0qn32ct3f"
 path="res://.godot/imported/banner_thin_green.gltf.glb-e42bbfa5e2a623086d5a8a1eea5b75aa.scn"
 
 [deps]
@@ -16,6 +16,8 @@ dest_files=["res://.godot/imported/banner_thin_green.gltf.glb-e42bbfa5e2a623086d
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -38,5 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
+gltf/naming_version=1
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0

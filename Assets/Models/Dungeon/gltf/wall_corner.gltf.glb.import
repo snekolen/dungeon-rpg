@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bx5g7q7uujpob"
+uid="uid://bk4rq85eno43d"
 path="res://.godot/imported/wall_corner.gltf.glb-f4d0ccd984f9cb106c8afe32f3c4c605.scn"
 
 [deps]
@@ -43,10 +43,11 @@ _subresources={
 "nodes": {
 "PATH:wall_corner": {
 "generate/physics": true,
+"physics/mask": 0,
 "physics/shape_type": 2
 }
 }
 }
-gltf/naming_version=2
+gltf/naming_version=1
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=0

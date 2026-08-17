@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd6okcs5hemem"
+uid="uid://ckqgn14h17ulv"
 path.s3tc="res://.godot/imported/pillar_decorated_dungeon_texture.png-3ad37cbba07543712c115af198540698.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

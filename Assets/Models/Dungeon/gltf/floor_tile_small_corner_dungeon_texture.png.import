@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf0ujmp6rq0iv"
+uid="uid://bchnkv0wkavhp"
 path.s3tc="res://.godot/imported/floor_tile_small_corner_dungeon_texture.png-b99fb10db549a5ac58a9a21b53ef5507.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

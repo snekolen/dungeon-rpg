@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bie8kdpd6cxuw"
+uid="uid://dm647kd0fb4ux"
 path.s3tc="res://.godot/imported/banner_patternA_green_dungeon_texture.png-7e1ce43019592c2a0781837a7580ed2e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

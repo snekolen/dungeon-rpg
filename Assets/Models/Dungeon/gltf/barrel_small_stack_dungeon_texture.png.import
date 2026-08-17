@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjl4tjysm8yp"
+uid="uid://bhq6u2xdbwex0"
 path.s3tc="res://.godot/imported/barrel_small_stack_dungeon_texture.png-a9cd26639b5797d4e080281899917fbf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

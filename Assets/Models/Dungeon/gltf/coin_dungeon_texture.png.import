@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg3o8mci6drda"
+uid="uid://c31dvekgi0rc1"
 path.s3tc="res://.godot/imported/coin_dungeon_texture.png-ab8f9c61ed1d01ed588f118852dd6543.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

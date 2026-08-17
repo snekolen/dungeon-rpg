@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn38tvoq3l7q7"
+uid="uid://o0hxyx8l1myj"
 path.s3tc="res://.godot/imported/wall_shelves_dungeon_texture.png-bda82757d5bc815798d0533b8d313e6d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

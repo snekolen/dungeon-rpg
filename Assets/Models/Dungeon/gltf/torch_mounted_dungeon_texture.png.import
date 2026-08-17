@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b40tlk7ouwvmn"
+uid="uid://coyvnjnt2u5l3"
 path.s3tc="res://.godot/imported/torch_mounted_dungeon_texture.png-6ef4a97a98c9125cfbf34475f5712e1b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

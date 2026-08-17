@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brmufx8o6xk4e"
+uid="uid://doiaujrt67533"
 path.s3tc="res://.godot/imported/table_medium_broken_dungeon_texture.png-5f2de49a5003d13ed7a49b0d65d9da1b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

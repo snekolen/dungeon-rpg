@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy0o4qpiomybx"
+uid="uid://yc1j0t5uu8mr"
 path.s3tc="res://.godot/imported/candle_melted_dungeon_texture.png-d69672368009753aede5947f27ba7ac7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

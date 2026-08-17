@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cx6d7jpf40eav"
+uid="uid://c3a6vdun7qqys"
 path="res://.godot/imported/stool.gltf.glb-4e7440c7710597276fa9535924b69fc7.scn"
 
 [deps]
@@ -16,6 +16,8 @@ dest_files=["res://.godot/imported/stool.gltf.glb-4e7440c7710597276fa9535924b69f
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -38,5 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
+gltf/naming_version=1
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0

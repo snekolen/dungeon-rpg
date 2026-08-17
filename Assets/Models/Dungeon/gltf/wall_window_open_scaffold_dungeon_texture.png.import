@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djgngyujvv1sp"
+uid="uid://3k45ewct31h5"
 path.s3tc="res://.godot/imported/wall_window_open_scaffold_dungeon_texture.png-235489a9a4547c88899b693a31284b0a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 

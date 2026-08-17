@@ -2,15 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1ehyfp84j1u2"
+uid="uid://441ll4mwnvtd"
 path.s3tc="res://.godot/imported/stairs_wide_dungeon_texture.png-2ef4f8f757cb76ede52b71cf5191dc51.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9a714bc33f4314ea4520009f20b048a8"
-}
+generator_parameters={}
 
 [deps]
 
