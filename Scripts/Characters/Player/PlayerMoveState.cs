@@ -13,7 +13,9 @@ public partial class PlayerMoveState : PlayerState
             return;
         }
 
-        characterNode.Velocity = new(characterNode.direction.X, 0, characterNode.direction.Y);
+        characterNode.Velocity = new(
+            characterNode.direction.X, 0, characterNode.direction.Y
+        );
         characterNode.Velocity *= speed;
 
         characterNode.MoveAndSlide();
@@ -28,6 +30,8 @@ public partial class PlayerMoveState : PlayerState
 
     public override void _Input(InputEvent @event)
     {
+        CheckForAttackInput();
+
         if (Input.IsActionJustPressed(GameConstants.INPUT_DASH))
         {
             characterNode.StateMachineNode.SwitchState<PlayerDashState>();
