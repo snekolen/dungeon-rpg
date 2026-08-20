@@ -82,6 +82,7 @@
 [ext_resource type="Texture2D" uid="uid://c4mydabr62e4r" path="res://Assets/Sprites/Characters/Player/Slashing/Slashing_009.png" id="60_oo1r6"]
 [ext_resource type="Texture2D" uid="uid://cs12df16ow5p1" path="res://Assets/Sprites/Characters/Player/Slashing/Slashing_010.png" id="61_l1gjj"]
 [ext_resource type="Script" uid="uid://bl6wtobi13yaq" path="res://Scripts/Characters/Player/PlayerAttackState.cs" id="66_lnj16"]
+[ext_resource type="Script" uid="uid://b8m4fo2vwlsxn" path="res://Scripts/Characters/Player/PlayerDeathState.cs" id="83_f4hmr"]
 
 [sub_resource type="Resource" id="Resource_qsdrq"]
 script = ExtResource("2_7mma4")
@@ -299,6 +300,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="DeathState" type="Node" parent="StateMachine" unique_id=1983045136]
+script = ExtResource("83_f4hmr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=318281066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.289575, 0)
