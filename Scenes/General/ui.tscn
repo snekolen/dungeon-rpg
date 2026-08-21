@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b7prcf5rv7hch"]
+
+[ext_resource type="Texture2D" uid="uid://bt5aynl2qs5kv" path="res://Assets/Sprites/UI/UI Element 1.png" id="1_88lu4"]
+[ext_resource type="Script" uid="uid://dtcumfxfjujkh" path="res://Scripts/UI/UIContainer.cs" id="1_p7v8i"]
+[ext_resource type="Script" uid="uid://bs4wfy2sm0et4" path="res://Scripts/UI/UIController.cs" id="1_ucxub"]
+[ext_resource type="FontFile" uid="uid://c7g2kax615qh4" path="res://Assets/RifficFree-Bold.ttf" id="2_2kjud"]
+[ext_resource type="Texture2D" uid="uid://bavu4qqfx6kif" path="res://Assets/Sprites/UI/UI Element 2.png" id="3_p7v8i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6nst"]
+texture = ExtResource("3_p7v8i")
+expand_margin_left = 48.0
+expand_margin_top = 8.0
+expand_margin_right = 48.0
+expand_margin_bottom = 16.0
+
+[node name="UI" type="Control" unique_id=634228989]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ucxub")
+
+[node name="Start" type="VBoxContainer" parent="." unique_id=907423022 node_paths=PackedStringArray("ButtonNode")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.5
+offset_top = -109.5
+offset_right = 260.5
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p7v8i")
+ButtonNode = NodePath("Button")
+
+[node name="TextureRect" type="TextureRect" parent="Start" unique_id=238275030]
+layout_mode = 2
+texture = ExtResource("1_88lu4")
+
+[node name="Button" type="Button" parent="Start" unique_id=1643775212]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_2kjud")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_f6nst")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f6nst")
+theme_override_styles/focus = SubResource("StyleBoxTexture_f6nst")
+text = "Start"
