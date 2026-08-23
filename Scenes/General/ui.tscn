@@ -14,6 +14,11 @@
 [ext_resource type="Resource" uid="uid://cl1mkxwpbwur" path="res://Resources/player_health_stat.tres" id="10_n75wy"]
 [ext_resource type="Resource" uid="uid://fpofolcvd321" path="res://Resources/player_strength_stat.tres" id="12_6qvwe"]
 [ext_resource type="Script" uid="uid://dk7swql4pl8ly" path="res://Scripts/UI/EnemyCountLabel.cs" id="14_c5l50"]
+[ext_resource type="Texture2D" uid="uid://eh6a5yp6dtpy" path="res://Assets/Sprites/UI/UI Element 3.png" id="15_26myh"]
+[ext_resource type="Texture2D" uid="uid://v7cpye6mco41" path="res://Assets/Sprites/UI/UI ElementUI 10.png" id="16_imqc7"]
+[ext_resource type="Texture2D" uid="uid://bus0u4xh3h7bl" path="res://Assets/Sprites/UI/UI ElementUI 11.png" id="17_uu2ew"]
+[ext_resource type="Texture2D" uid="uid://ds5b7t5e0b031" path="res://Assets/Sprites/UI/UI Element 5.png" id="18_frc1q"]
+[ext_resource type="Texture2D" uid="uid://dyxli7ef7yrqx" path="res://Assets/Sprites/UI/UI Element 4.png" id="19_gmcym"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6nst"]
 texture = ExtResource("3_p7v8i")
@@ -27,6 +32,16 @@ texture = ExtResource("6_kdkgu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k2lr6"]
 texture = ExtResource("7_y1xua")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdvtu"]
+texture = ExtResource("15_26myh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7sp6f"]
+texture = ExtResource("19_gmcym")
+expand_margin_left = 72.0
+expand_margin_top = 16.0
+expand_margin_right = 72.0
+expand_margin_bottom = 22.0
 
 [node name="UI" type="Control" unique_id=634228989]
 process_mode = 3
@@ -169,3 +184,135 @@ theme_override_fonts/font = ExtResource("2_2kjud")
 theme_override_font_sizes/font_size = 28
 text = "---"
 script = ExtResource("14_c5l50")
+
+[node name="Defeat" type="PanelContainer" parent="." unique_id=50188773]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -260.0
+offset_right = 260.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gdvtu")
+script = ExtResource("1_p7v8i")
+container = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Defeat" unique_id=1530276671]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Defeat/MarginContainer" unique_id=787268276]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Label" type="Label" parent="Defeat/MarginContainer/VBoxContainer" unique_id=1206830853]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_2kjud")
+theme_override_font_sizes/font_size = 48
+text = "DEFEAT"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Defeat/MarginContainer/VBoxContainer" unique_id=2136673009]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("16_imqc7")
+
+[node name="Victory" type="PanelContainer" parent="." unique_id=2005339630]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -260.0
+offset_right = 260.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gdvtu")
+script = ExtResource("1_p7v8i")
+container = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Victory" unique_id=740137829]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Victory/MarginContainer" unique_id=1075757426]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Label" type="Label" parent="Victory/MarginContainer/VBoxContainer" unique_id=1486348829]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_2kjud")
+theme_override_font_sizes/font_size = 48
+text = "VICTORY"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Victory/MarginContainer/VBoxContainer" unique_id=762019690]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("17_uu2ew")
+
+[node name="Pause" type="PanelContainer" parent="." unique_id=1187618176 node_paths=PackedStringArray("ButtonNode")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -260.0
+offset_right = 260.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gdvtu")
+script = ExtResource("1_p7v8i")
+container = 1
+ButtonNode = NodePath("MarginContainer/VBoxContainer/Button")
+
+[node name="MarginContainer" type="MarginContainer" parent="Pause" unique_id=692687790]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/MarginContainer" unique_id=1520913207]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Label" type="Label" parent="Pause/MarginContainer/VBoxContainer" unique_id=844805841]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_2kjud")
+theme_override_font_sizes/font_size = 48
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Pause/MarginContainer/VBoxContainer" unique_id=1473660598]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("18_frc1q")
+
+[node name="Button" type="Button" parent="Pause/MarginContainer/VBoxContainer" unique_id=796723823]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_2kjud")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_7sp6f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7sp6f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7sp6f")
+theme_override_styles/focus = SubResource("StyleBoxTexture_7sp6f")
+text = "CONTINUE"
