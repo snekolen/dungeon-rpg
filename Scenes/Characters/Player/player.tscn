@@ -2,10 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://dfry4qfunxlb8" path="res://Assets/Sprites/Characters/Player/Running/Running_011.png" id="1_0orax"]
 [ext_resource type="Script" uid="uid://fbfm5rjqv8ag" path="res://Scripts/Characters/Player/Player.cs" id="1_kwwwg"]
-[ext_resource type="Script" uid="uid://by3m55oa0dpwb" path="res://Scripts/Resources/StatResource.cs" id="2_7mma4"]
+[ext_resource type="Resource" uid="uid://cl1mkxwpbwur" path="res://Resources/player_health_stat.tres" id="2_0lsgw"]
 [ext_resource type="Texture2D" uid="uid://pu510hrguttd" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_000.png" id="2_056gb"]
 [ext_resource type="Texture2D" uid="uid://bh62p4nwppqt0" path="res://Assets/Sprites/Characters/Player/Slashing/Slashing_011.png" id="2_kpn77"]
 [ext_resource type="Texture2D" uid="uid://bn5burqe21h1l" path="res://Assets/Sprites/Characters/Player/Sliding/Sliding_005.png" id="2_pdp80"]
+[ext_resource type="Resource" uid="uid://fpofolcvd321" path="res://Resources/player_strength_stat.tres" id="3_0lsgw"]
 [ext_resource type="Texture2D" uid="uid://byqklc7c043dj" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_001.png" id="3_5by13"]
 [ext_resource type="Texture2D" uid="uid://cg66nx88fxlcc" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_002.png" id="4_2ktmw"]
 [ext_resource type="Texture2D" uid="uid://b0x55o1q13x42" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_003.png" id="5_6b0fm"]
@@ -83,15 +84,6 @@
 [ext_resource type="Texture2D" uid="uid://cs12df16ow5p1" path="res://Assets/Sprites/Characters/Player/Slashing/Slashing_010.png" id="61_l1gjj"]
 [ext_resource type="Script" uid="uid://bl6wtobi13yaq" path="res://Scripts/Characters/Player/PlayerAttackState.cs" id="66_lnj16"]
 [ext_resource type="Script" uid="uid://b8m4fo2vwlsxn" path="res://Scripts/Characters/Player/PlayerDeathState.cs" id="83_f4hmr"]
-
-[sub_resource type="Resource" id="Resource_qsdrq"]
-script = ExtResource("2_7mma4")
-StatValue = 100.0
-
-[sub_resource type="Resource" id="Resource_tsihl"]
-script = ExtResource("2_7mma4")
-StatType = 1
-StatValue = 3.0
 
 [sub_resource type="Animation" id="Animation_jwr2j"]
 resource_name = "Attack1"
@@ -257,7 +249,7 @@ collision_mask = 5
 floor_max_angle = 1.55334
 floor_snap_length = 0.2
 script = ExtResource("1_kwwwg")
-stats = Array[Object]([SubResource("Resource_qsdrq"), SubResource("Resource_tsihl")])
+stats = Array[Object]([ExtResource("2_0lsgw"), ExtResource("3_0lsgw")])
 AnimPlayerNode = NodePath("AnimationPlayer")
 SpriteNode = NodePath("Sprite3D")
 StateMachineNode = NodePath("StateMachine")

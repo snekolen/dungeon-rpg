@@ -22,6 +22,8 @@ public partial class UIController : Control
         GetTree().Paused = false;
 
         containers[ContainterType.Start].Visible = false;
+        containers[ContainterType.Stats].Visible = true;
+
         GameEvents.RaiseStartGame();
     }
 
