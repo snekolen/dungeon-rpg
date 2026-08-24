@@ -5,4 +5,6 @@ public partial class UIContainer : Container
 {
     [Export] public ContainterType container { get; private set; }
     [Export] public Button ButtonNode { get; private set; }
+    [Export] public TextureRect TextureNode { get; private set; }
+    [Export] public Label Labelnode { get; private set; }
 }

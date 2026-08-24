@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bus0u4xh3h7bl" path="res://Assets/Sprites/UI/UI ElementUI 11.png" id="17_uu2ew"]
 [ext_resource type="Texture2D" uid="uid://ds5b7t5e0b031" path="res://Assets/Sprites/UI/UI Element 5.png" id="18_frc1q"]
 [ext_resource type="Texture2D" uid="uid://dyxli7ef7yrqx" path="res://Assets/Sprites/UI/UI Element 4.png" id="19_gmcym"]
+[ext_resource type="Texture2D" uid="uid://s34krdb5hqlw" path="res://Assets/Sprites/UI/UI ElementUI 13.png" id="20_7sp6f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6nst"]
 texture = ExtResource("3_p7v8i")
@@ -307,6 +308,73 @@ size_flags_horizontal = 4
 texture = ExtResource("18_frc1q")
 
 [node name="Button" type="Button" parent="Pause/MarginContainer/VBoxContainer" unique_id=796723823]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_2kjud")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_7sp6f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7sp6f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7sp6f")
+theme_override_styles/focus = SubResource("StyleBoxTexture_7sp6f")
+text = "CONTINUE"
+
+[node name="Reward" type="PanelContainer" parent="." unique_id=1857897662 node_paths=PackedStringArray("ButtonNode", "TextureNode", "Labelnode")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -260.0
+offset_right = 260.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gdvtu")
+script = ExtResource("1_p7v8i")
+container = 5
+ButtonNode = NodePath("MarginContainer/VBoxContainer/VBoxContainer/Button")
+TextureNode = NodePath("MarginContainer/VBoxContainer/VBoxContainer/TextureRect")
+Labelnode = NodePath("MarginContainer/VBoxContainer/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="Reward" unique_id=23891603]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Reward/MarginContainer" unique_id=266875179]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Reward/MarginContainer/VBoxContainer" unique_id=1498367799]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_2kjud")
+theme_override_font_sizes/font_size = 48
+text = "REWARD"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Reward/MarginContainer/VBoxContainer" unique_id=1492954716]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="TextureRect" type="TextureRect" parent="Reward/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2094304951]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("20_7sp6f")
+
+[node name="RewardText" type="Label" parent="Reward/MarginContainer/VBoxContainer/VBoxContainer" unique_id=413134697]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_2kjud")
+theme_override_font_sizes/font_size = 22
+text = "REWARD"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Reward/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1995183241]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_2kjud")

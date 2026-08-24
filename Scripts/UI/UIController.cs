@@ -14,11 +14,14 @@ public partial class UIController : Control
         .Cast<UIContainer>().ToDictionary((element) => element.container);
 
         containers[ContainterType.Start].Visible = true;
+
         containers[ContainterType.Start].ButtonNode.Pressed += HandleStartPressed;
         containers[ContainterType.Pause].ButtonNode.Pressed += HandlePausePressed;
+        containers[ContainterType.Reward].ButtonNode.Pressed += HandleRewardPressed;
 
         GameEvents.onEndGame += HandleEndGame;
         GameEvents.onVictory += HandleVictory;
+        GameEvents.onReward += HandleReward;
     }
 
     public override void _Input(InputEvent @event)
@@ -68,5 +71,26 @@ public partial class UIController : Control
 
         containers[ContainterType.Pause].Visible = false;
         containers[ContainterType.Stats].Visible = true;
+    }
+
+    private void HandleReward(RewardResource resource)
+    {
+        canPause = false;
+        GetTree().Paused = true;
+
+        containers[ContainterType.Stats].Visible = false;
+        containers[ContainterType.Reward].Visible = true;
+
+        containers[ContainterType.Reward].TextureNode.Texture = resource.SpriteTexture;
+        containers[ContainterType.Reward].Labelnode.Text = resource.Description;
+    }
+
+    private void HandleRewardPressed()
+    {
+        canPause = true;
+        GetTree().Paused = false;
+
+        containers[ContainterType.Stats].Visible = true;
+        containers[ContainterType.Reward].Visible = false;
     }
 }
