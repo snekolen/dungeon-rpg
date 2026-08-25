@@ -84,6 +84,8 @@
 [ext_resource type="Texture2D" uid="uid://cs12df16ow5p1" path="res://Assets/Sprites/Characters/Player/Slashing/Slashing_010.png" id="61_l1gjj"]
 [ext_resource type="Script" uid="uid://bl6wtobi13yaq" path="res://Scripts/Characters/Player/PlayerAttackState.cs" id="66_lnj16"]
 [ext_resource type="Script" uid="uid://b8m4fo2vwlsxn" path="res://Scripts/Characters/Player/PlayerDeathState.cs" id="83_f4hmr"]
+[ext_resource type="PackedScene" uid="uid://cud5vcw8kg5b0" path="res://Scenes/Abilities/bomb.tscn" id="83_oslfk"]
+[ext_resource type="Script" uid="uid://bj4n6cwcotktt" path="res://Scripts/Characters/AttackHitbox.cs" id="86_8nlno"]
 
 [sub_resource type="Animation" id="Animation_jwr2j"]
 resource_name = "Attack1"
@@ -278,6 +280,7 @@ script = ExtResource("32_qwewj")
 [node name="DashState" type="Node" parent="StateMachine" unique_id=255676549 node_paths=PackedStringArray("dashTimerNode")]
 script = ExtResource("41_bghx0")
 dashTimerNode = NodePath("Timer")
+bombScene = ExtResource("83_oslfk")
 
 [node name="Timer" type="Timer" parent="StateMachine/DashState" unique_id=89119030]
 wait_time = 0.4
@@ -301,6 +304,7 @@ shape = SubResource("CapsuleShape3D_8lshh")
 [node name="Hitbox" type="Area3D" parent="." unique_id=1494358500]
 collision_layer = 2
 collision_mask = 0
+script = ExtResource("86_8nlno")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox" unique_id=1266356890]
 shape = SubResource("BoxShape3D_f65eg")

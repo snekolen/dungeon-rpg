@@ -108,6 +108,7 @@
 [ext_resource type="Script" uid="uid://bin7ygks0c81t" path="res://Scripts/Characters/Enemy/EnemyChaseState.cs" id="105_5uo8i"]
 [ext_resource type="Script" uid="uid://cla03boe6rdrh" path="res://Scripts/Characters/Enemy/EnemyAttackState.cs" id="106_ky2xj"]
 [ext_resource type="Script" uid="uid://bnm8fij5trm05" path="res://Scripts/Characters/Enemy/EnemyDeathState.cs" id="108_u4k2w"]
+[ext_resource type="Script" uid="uid://bj4n6cwcotktt" path="res://Scripts/Characters/AttackHitbox.cs" id="109_kb7ur"]
 
 [sub_resource type="Resource" id="Resource_lms1d"]
 script = ExtResource("2_p8mr6")
@@ -331,6 +332,7 @@ shape = SubResource("CapsuleShape3D_der1c")
 [node name="Hitbox" type="Area3D" parent="." unique_id=1020091120]
 collision_layer = 4
 collision_mask = 0
+script = ExtResource("109_kb7ur")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox" unique_id=1999836605]
 shape = SubResource("BoxShape3D_k2lr6")
