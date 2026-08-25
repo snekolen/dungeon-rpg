@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c5ma6725yjy0" path="res://Assets/Sprites/Effects/Explosion/8.png" id="9_s2hlc"]
 [ext_resource type="Texture2D" uid="uid://c0svkfro5wx7t" path="res://Assets/Sprites/Effects/Explosion/9.png" id="10_wp1cl"]
 [ext_resource type="Texture2D" uid="uid://cu56x8jdkuja5" path="res://Assets/Sprites/Effects/Explosion/10.png" id="11_lsc7e"]
-[ext_resource type="Script" uid="uid://fr7d01pw6gx2" path="res://Scenes/Abilities/AbilityHitbox.cs" id="13_dsk7x"]
+[ext_resource type="Script" uid="uid://bi7urxtabnfgd" path="res://Scripts/Abilities/AbilityHitbox.cs" id="13_dsk7x"]
 
 [sub_resource type="Animation" id="Animation_wbgfj"]
 resource_name = "Expand"
