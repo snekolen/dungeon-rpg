@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dfcwswtndgttb" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_000.png" id="2_0qmj0"]
 [ext_resource type="Script" uid="uid://by3m55oa0dpwb" path="res://Scripts/Resources/StatResource.cs" id="2_p8mr6"]
 [ext_resource type="Texture2D" uid="uid://xpvsu3xxm2pb" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_002.png" id="3_kdv84"]
+[ext_resource type="Shader" uid="uid://b7fldd04cfo32" path="res://Shaders/character_hurt.gdshader" id="3_p0c8j"]
 [ext_resource type="Texture2D" uid="uid://c4vhbs277gj8g" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_003.png" id="4_jsd5r"]
 [ext_resource type="Texture2D" uid="uid://vrj7hlsjfgbe" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_004.png" id="5_hmmqt"]
 [ext_resource type="Texture2D" uid="uid://bmlr3myamfgk" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_005.png" id="6_m23q8"]
@@ -118,6 +119,13 @@ StatValue = 20.0
 script = ExtResource("2_p8mr6")
 StatType = 1
 StatValue = 4.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_si63r"]
+render_priority = 1
+shader = ExtResource("3_p0c8j")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/tex = ExtResource("22_mkh4u")
 
 [sub_resource type="Animation" id="Animation_onvs4"]
 resource_name = "Attack"
@@ -263,6 +271,7 @@ ChaseAreaNode = NodePath("ChaseArea")
 AttackAreaNode = NodePath("AttackArea")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=79855734]
+material_override = SubResource("ShaderMaterial_si63r")
 pixel_size = 0.0025
 texture = ExtResource("22_mkh4u")
 

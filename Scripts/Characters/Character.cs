@@ -21,25 +21,38 @@ public abstract partial class Character : CharacterBody3D
     [Export] public Area3D AttackAreaNode { get; private set; }
 
     public Vector2 direction = new();
+    private ShaderMaterial shader;
 
     public override void _Ready()
     {
+        shader = (ShaderMaterial)SpriteNode.MaterialOverlay;
+
         HurtboxNode.AreaEntered += HandleHurtboxEntered;
+        SpriteNode.TextureChanged += HandleTextureChanged;
     }
 
+    private void HandleTextureChanged()
+    {
+        GD.Print(SpriteNode.Name);
+        shader.SetShaderParameter(
+            "tex", SpriteNode.Texture
+        );
+    }
     private void HandleHurtboxEntered(Area3D area)
     {
-        if (area is not IHitbox hitbox)
-        {
-            return ;
-        }
+        if (area is not IHitbox hitbox) { return; }
 
         StatResource health = GetStatResource(Stat.Health);
 
         float damage = hitbox.GetDamage();
+
         health.StatValue -= damage;
 
-        GD.Print(health.StatValue);
+        shader.SetShaderParameter(
+            "active", true
+        );
+
+        
     }
 
     public StatResource GetStatResource(Stat stat)

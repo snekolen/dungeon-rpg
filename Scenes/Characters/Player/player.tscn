@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://fpofolcvd321" path="res://Resources/player_strength_stat.tres" id="3_0lsgw"]
 [ext_resource type="Texture2D" uid="uid://byqklc7c043dj" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_001.png" id="3_5by13"]
 [ext_resource type="Texture2D" uid="uid://cg66nx88fxlcc" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_002.png" id="4_2ktmw"]
+[ext_resource type="Shader" uid="uid://b7fldd04cfo32" path="res://Shaders/character_hurt.gdshader" id="4_si63r"]
 [ext_resource type="Texture2D" uid="uid://b0x55o1q13x42" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_003.png" id="5_6b0fm"]
 [ext_resource type="Texture2D" uid="uid://dv5ancqy4rykw" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_004.png" id="6_np2mi"]
 [ext_resource type="Texture2D" uid="uid://c26yvpmingxfv" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_005.png" id="7_harhd"]
@@ -87,6 +88,13 @@
 [ext_resource type="PackedScene" uid="uid://cud5vcw8kg5b0" path="res://Scenes/Abilities/bomb.tscn" id="83_oslfk"]
 [ext_resource type="PackedScene" uid="uid://dwmhm3odinbpa" path="res://Scenes/Abilities/lightning.tscn" id="85_gtnqr"]
 [ext_resource type="Script" uid="uid://bj4n6cwcotktt" path="res://Scripts/Characters/AttackHitbox.cs" id="86_8nlno"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fg5t1"]
+render_priority = 1
+shader = ExtResource("4_si63r")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/tex = ExtResource("39_vsakl")
 
 [sub_resource type="Animation" id="Animation_jwr2j"]
 resource_name = "Attack1"
@@ -261,6 +269,7 @@ HitboxNode = NodePath("Hitbox")
 HitboxShapeNode = NodePath("Hitbox/CollisionShape3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1893474503]
+material_overlay = SubResource("ShaderMaterial_fg5t1")
 pixel_size = 0.0025
 texture_filter = 0
 texture = ExtResource("39_vsakl")
