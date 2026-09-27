@@ -1,9 +1,9 @@
-public enum ContainterType
+public enum ContainerType
 {
     Start,
     Pause,
     Victory,
     Defeat,
-    Stats, 
+    Stats,
     Reward
 }

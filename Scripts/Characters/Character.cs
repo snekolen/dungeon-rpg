@@ -13,6 +13,7 @@ public abstract partial class Character : CharacterBody3D
     [Export] public Area3D HurtboxNode { get; private set; }
     [Export] public Area3D HitboxNode { get; private set; }
     [Export] public CollisionShape3D HitboxShapeNode { get; private set; }
+    [Export] public Timer ShaderTimerNode { get; private set; }
 
     [ExportGroup("AI Nodes")]
     [Export] public Path3D PathNode { get; private set; }
@@ -29,15 +30,21 @@ public abstract partial class Character : CharacterBody3D
 
         HurtboxNode.AreaEntered += HandleHurtboxEntered;
         SpriteNode.TextureChanged += HandleTextureChanged;
+        ShaderTimerNode.Timeout += HandleShaderTimeout;
+    }
+
+    private void HandleShaderTimeout()
+    {
+        shader.SetShaderParameter("active", false);
     }
 
     private void HandleTextureChanged()
     {
-        GD.Print(SpriteNode.Name);
         shader.SetShaderParameter(
             "tex", SpriteNode.Texture
         );
     }
+
     private void HandleHurtboxEntered(Area3D area)
     {
         if (area is not IHitbox hitbox) { return; }
@@ -52,7 +59,7 @@ public abstract partial class Character : CharacterBody3D
             "active", true
         );
 
-        
+        ShaderTimerNode.Start();
     }
 
     public StatResource GetStatResource(Stat stat)

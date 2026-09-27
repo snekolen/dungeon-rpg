@@ -13,7 +13,8 @@ public partial class Bomb : Ability
         if (animName == GameConstants.ANIM_EXPAND)
         {
             playerNode.Play(GameConstants.ANIM_EXPLOSION);
-        }else
+        }
+        else
         {
             QueueFree();
         }

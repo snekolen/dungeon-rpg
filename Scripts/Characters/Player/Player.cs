@@ -3,13 +3,13 @@ using System;
 
 public partial class Player : Character
 {
-
     public override void _Ready()
     {
         base._Ready();
 
-        GameEvents.onReward += HandleReward;
+        GameEvents.OnReward += HandleReward;
     }
+
 
     public override void _Input(InputEvent @event)
     {
@@ -19,9 +19,9 @@ public partial class Player : Character
         );
     }
 
-    public void HandleReward(RewardResource resource)
+    private void HandleReward(RewardResource resource)
     {
-        StatResource targetStat = GetStatResource(resource.TargetStat);
+        StatResource targetStat = GetStatResource(resource.TargetSat);
 
         targetStat.StatValue += resource.Amount;
     }

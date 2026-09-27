@@ -7,5 +7,4 @@ public partial class Main : Node3D
     {
         GetTree().Paused = true;
     }
-
 }

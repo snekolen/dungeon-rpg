@@ -15,14 +15,17 @@ public partial class TreasureChest : StaticBody3D
 
     public override void _Input(InputEvent @event)
     {
-        if(!areaNode.Monitoring || !areaNode.HasOverlappingBodies() || !Input.IsActionJustPressed(GameConstants.INPUT_INTERACT))
+        if (
+            !areaNode.Monitoring ||
+            !areaNode.HasOverlappingBodies() ||
+            !Input.IsActionJustPressed(GameConstants.INPUT_INTERACT)
+        )
         {
-            return ;
+            return;
         }
 
         areaNode.Monitoring = false;
 
         GameEvents.RaiseReward(reward);
     }
-    
 }
