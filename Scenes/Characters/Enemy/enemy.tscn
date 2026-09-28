@@ -321,7 +321,6 @@ script = ExtResource("108_4gam3")
 script = ExtResource("110_ro4bk")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=539070973]
-debug_enabled = true
 
 [node name="ChaseArea" type="Area3D" parent="." unique_id=1998178849]
 collision_layer = 0
