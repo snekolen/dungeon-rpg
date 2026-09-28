@@ -4,6 +4,7 @@ using System;
 public partial class PlayerAttackState : PlayerState
 {
     [Export] private Timer comboTimerNode;
+    [Export] private PackedScene lightningScene;
 
     private int comboCounter = 1;
     private int maxComboCount = 2;
@@ -24,11 +25,22 @@ public partial class PlayerAttackState : PlayerState
         );
 
         characterNode.AnimPlayerNode.AnimationFinished += HandleAnimationFinished;
+        characterNode.HitboxNode.BodyEntered += HandleBodyEntered;
+    }
+
+    private void HandleBodyEntered(Node3D body)
+    {
+        if (comboCounter != maxComboCount) { return; }
+
+        Node3D lightning = lightningScene.Instantiate<Node3D>();
+        GetTree().CurrentScene.AddChild(lightning);
+        lightning.GlobalPosition = body.GlobalPosition;
     }
 
     protected override void ExitState()
     {
         characterNode.AnimPlayerNode.AnimationFinished -= HandleAnimationFinished;
+        characterNode.HitboxNode.BodyEntered -= HandleBodyEntered;
 
         comboTimerNode.Start();
     }
@@ -40,6 +52,7 @@ public partial class PlayerAttackState : PlayerState
         comboCounter = Mathf.Wrap(comboCounter, 1, maxComboCount + 1);
 
         characterNode.ToggleHitbox(true);
+
         characterNode.StateMachineNode.SwitchState<PlayerIdleState>();
     }
 
@@ -52,6 +65,7 @@ public partial class PlayerAttackState : PlayerState
         newPosition *= distanceMultiplier;
 
         characterNode.HitboxNode.Position = newPosition;
+
         characterNode.ToggleHitbox(false);
     }
 }

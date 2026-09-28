@@ -5,7 +5,7 @@ public partial class EnemyCountLabel : Label
 {
     public override void _Ready()
     {
-        GameEvents.onNewEnemyCount += HandleNewEnemyCount;
+        GameEvents.OnNewEnemyCount += HandleNewEnemyCount;
     }
 
     private void HandleNewEnemyCount(int count)
