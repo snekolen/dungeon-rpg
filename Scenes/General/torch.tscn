@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://d0e6olc36lqla"]
+
+[ext_resource type="PackedScene" uid="uid://dd73ixt1m5xxj" path="res://Assets/Models/Dungeon/gltf/torch_mounted.gltf.glb" id="1_ymcw7"]
+
+[sub_resource type="Gradient" id="Gradient_ymcw7"]
+offsets = PackedFloat32Array(0, 0.9766082)
+colors = PackedColorArray(0.92156863, 0.25882354, 0.2627451, 1, 0.6627451, 0.4392157, 0.18431373, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ymcw7"]
+gradient = SubResource("Gradient_ymcw7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hwid1"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(0.05, 0.05, 0.05)
+direction = Vector3(0, 1, 0)
+spread = 25.0
+initial_velocity_min = 0.5
+initial_velocity_max = 1.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+color_ramp = SubResource("GradientTexture1D_ymcw7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2c4uj"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 0.5882353)
+
+[sub_resource type="SphereMesh" id="SphereMesh_k2lr6"]
+material = SubResource("StandardMaterial3D_2c4uj")
+radius = 0.1
+height = 0.2
+
+[node name="Torch" type="Node3D" unique_id=602764540]
+
+[node name="torch_mounted_gltf" parent="." unique_id=981859378 instance=ExtResource("1_ymcw7")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=322242559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5273288, 0.31326175)
+light_color = Color(0.8509804, 0.4862745, 0.2627451, 1)
+light_energy = 5.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1509228005]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5360894, 0.31450376)
+amount = 60
+process_material = SubResource("ParticleProcessMaterial_hwid1")
+draw_pass_1 = SubResource("SphereMesh_k2lr6")

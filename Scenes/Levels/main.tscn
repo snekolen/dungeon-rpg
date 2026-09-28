@@ -6,13 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://ciycpbfdvn4o2" path="res://Assets/Models/Dungeon/gltf/barrel_large_decorated.gltf.glb" id="4_asd15"]
 [ext_resource type="Script" uid="uid://dmjumprg8munt" path="res://Scripts/Characters/Enemy/EnemiesContainer.cs" id="4_bveu6"]
 [ext_resource type="PackedScene" uid="uid://c7sxif8wpiq5s" path="res://Scenes/Characters/Enemy/enemy.tscn" id="4_ny7lo"]
-[ext_resource type="PackedScene" uid="uid://b7prcf5rv7hch" path="res://Scenes/General/ui.tscn" id="5_f3tv2"]
+[ext_resource type="PackedScene" uid="uid://dglk6v8lfcoku" path="res://Scenes/General/ui.tscn" id="5_f3tv2"]
 [ext_resource type="PackedScene" uid="uid://beevqt1rcfvvy" path="res://Assets/Models/Dungeon/gltf/banner_triple_red.gltf.glb" id="5_lv1w4"]
 [ext_resource type="Script" uid="uid://cbbi1p6ghvqe6" path="res://Scripts/General/Camera.cs" id="6_b5v2x"]
 [ext_resource type="Script" uid="uid://by3m55oa0dpwb" path="res://Scripts/Resources/StatResource.cs" id="7_firsy"]
 [ext_resource type="PackedScene" uid="uid://b1bp1vw0r6jn2" path="res://Assets/Models/Dungeon/gltf/banner_triple_blue.gltf.glb" id="7_irn1k"]
 [ext_resource type="PackedScene" uid="uid://utdxl72rle64" path="res://Assets/Models/Dungeon/gltf/banner_patternB_green.gltf.glb" id="8_42g4d"]
-[ext_resource type="PackedScene" uid="uid://ls7f2v0kfea3" path="res://Scenes/Reward/treasure_chest.tscn" id="9_3g02b"]
+[ext_resource type="PackedScene" uid="uid://yw8ug827djty" path="res://Scenes/Reward/treasure_chest.tscn" id="9_3g02b"]
 [ext_resource type="PackedScene" uid="uid://b5x3f3o37spbc" path="res://Assets/Models/Dungeon/gltf/banner_brown.gltf.glb" id="9_42g4d"]
 [ext_resource type="PackedScene" uid="uid://kgep2i4f0qps" path="res://Assets/Models/Dungeon/gltf/banner_patternA_yellow.gltf.glb" id="9_pgcb0"]
 [ext_resource type="Texture2D" uid="uid://s34krdb5hqlw" path="res://Assets/Sprites/UI/UI ElementUI 13.png" id="10_h7n1y"]
@@ -26,9 +26,11 @@
 [ext_resource type="PackedScene" uid="uid://cgg0gd4ofgy43" path="res://Assets/Models/Dungeon/gltf/crates_stacked.gltf.glb" id="16_8rt6e"]
 [ext_resource type="PackedScene" uid="uid://bxdoo2v2y67x8" path="res://Assets/Models/Dungeon/gltf/box_large.gltf.glb" id="17_ksskw"]
 [ext_resource type="PackedScene" uid="uid://bkyh1brvowwkn" path="res://Assets/Models/Dungeon/gltf/pillar_decorated.gltf.glb" id="18_2tpv6"]
+[ext_resource type="PackedScene" uid="uid://d0e6olc36lqla" path="res://Scenes/General/torch.tscn" id="19_wnekd"]
+[ext_resource type="PackedScene" uid="uid://c28wsedeyxb7b" path="res://Scenes/General/candle.tscn" id="20_56s34"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_hwid1"]
-rayleigh_color = Color(0.058296643, 0.27751738, 0.67856306, 1)
+rayleigh_color = Color(0.00867422, 0.23465791, 0.55945915, 1)
 
 [sub_resource type="Sky" id="Sky_t3gcx"]
 sky_material = SubResource("PhysicalSkyMaterial_hwid1")
@@ -128,7 +130,7 @@ environment = SubResource("Environment_k2lr6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=437112731]
 transform = Transform3D(0.66456217, 0.7449187, -0.058766324, -0.57660913, 0.56124824, 0.59373593, 0.4752674, -0.36068922, 0.8025113, 23.407772, 4.3606677, 7.834697)
-light_energy = 0.2
+light_energy = 0.15
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=589555787 instance=ExtResource("2_y1e60")]
@@ -440,7 +442,7 @@ transform = Transform3D(-0.0038474277, 0, 1.1999937, 0, 1.2000002, 0, -1.1999937
 transform = Transform3D(-0.84778917, 0, 0.84926647, 0, 1.2000002, 0, -0.84926647, 0, -0.84778917, 10.666773, 5.0499997, -37.870136)
 
 [node name="table_long_tablecloth_decorated_A_gltf3" parent="Environment/Tables" unique_id=37638429 instance=ExtResource("13_g8fqy")]
-transform = Transform3D(0.039140314, 0, 1.1993616, 0, 1.2000002, 0, -1.1993616, 0, 0.039140314, 26.361937, 5.0499997, -39.40882)
+transform = Transform3D(0.039140314, 0, 1.1993616, 0, 1.2000002, 0, -1.1993616, 0, 0.039140314, 26.361937, 5.0499997, -43.004036)
 
 [node name="table_long_decorated_A_gltf2" parent="Environment/Tables" unique_id=908973422 instance=ExtResource("14_0w7p8")]
 transform = Transform3D(1.2, 0, 0, 0, 1.1999999, 0, 0, 0, 1.2, 71.547134, 1.0499997, -10.403529)
@@ -527,6 +529,157 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.318577, 0, 0.41565442)
 
 [node name="pillar_decorated_gltf6" parent="Environment/Props" unique_id=1397580881 instance=ExtResource("18_2tpv6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.964447, 0, 0.41565442)
+
+[node name="Torches" type="Node3D" parent="Environment" unique_id=347152894]
+
+[node name="Torch" parent="Environment/Torches" unique_id=602764540 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2829313, -3.8552427)
+
+[node name="Torch2" parent="Environment/Torches" unique_id=655243734 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.140868, 3.2829313, -3.8552427)
+
+[node name="Torch3" parent="Environment/Torches" unique_id=8956860 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.895876, 3.2829313, -3.8552427)
+
+[node name="Torch4" parent="Environment/Torches" unique_id=1099901453 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.020996, 3.2829313, -3.8552427)
+
+[node name="Torch5" parent="Environment/Torches" unique_id=1121469398 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.776005, 3.2829313, -3.8552427)
+
+[node name="Torch6" parent="Environment/Torches" unique_id=1425153237 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.74587, 3.2829313, -3.8552427)
+
+[node name="Torch7" parent="Environment/Torches" unique_id=1381992083 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.199047, 3.2829313, -28.245115)
+
+[node name="Torch34" parent="Environment/Torches" unique_id=1264325057 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.361736, 7.283, -48.07751)
+
+[node name="Torch35" parent="Environment/Torches" unique_id=1449222803 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.245373, 7.283, -48.07751)
+
+[node name="Torch36" parent="Environment/Torches" unique_id=543744846 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.719837, 7.283, -48.07751)
+
+[node name="Torch8" parent="Environment/Torches" unique_id=707555383 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.72111, 3.2829313, -28.245115)
+
+[node name="Torch9" parent="Environment/Torches" unique_id=962418687 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.50354, 3.2829313, -28.245115)
+
+[node name="Torch10" parent="Environment/Torches" unique_id=1835405300 instance=ExtResource("19_wnekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.047035, 3.2829313, -28.245115)
+
+[node name="Torch11" parent="Environment/Torches" unique_id=62722695 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 46.51596, 3.2829313, -24.218817)
+
+[node name="Torch12" parent="Environment/Torches" unique_id=17788130 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 46.51596, 3.2829313, -16.525581)
+
+[node name="Torch13" parent="Environment/Torches" unique_id=293006724 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 46.51596, 3.2829313, -7.8579216)
+
+[node name="Torch14" parent="Environment/Torches" unique_id=574241596 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 73.59751, 3.2829313, -21.403313)
+
+[node name="Torch15" parent="Environment/Torches" unique_id=225893209 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 73.59751, 3.2829313, -13.710076)
+
+[node name="Torch16" parent="Environment/Torches" unique_id=1425272493 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 73.59751, 3.2829313, -5.0424166)
+
+[node name="Torch17" parent="Environment/Torches" unique_id=1554324101 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 73.59751, 3.2829313, 2.842802)
+
+[node name="Torch18" parent="Environment/Torches" unique_id=1430185543 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.54187, 3.2829313, -13.185233)
+
+[node name="Torch19" parent="Environment/Torches" unique_id=1480740279 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.54187, 3.2829313, -5.3000145)
+
+[node name="Torch20" parent="Environment/Torches" unique_id=1423108243 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.381432, 3.2829313, -13.185233)
+
+[node name="Torch21" parent="Environment/Torches" unique_id=1981845839 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.381432, 3.2829313, -5.3000145)
+
+[node name="Torch22" parent="Environment/Torches" unique_id=1379511863 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.54187, 7.283, -13.185233)
+
+[node name="Torch23" parent="Environment/Torches" unique_id=550176587 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.54187, 7.283, -5.3000145)
+
+[node name="Torch24" parent="Environment/Torches" unique_id=36820009 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.381432, 7.283, -13.185233)
+
+[node name="Torch25" parent="Environment/Torches" unique_id=2097930698 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.381432, 7.283, -5.3000145)
+
+[node name="Torch26" parent="Environment/Torches" unique_id=673486305 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.366783, 7.283, -28.116114)
+
+[node name="Torch28" parent="Environment/Torches" unique_id=312957785 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.366783, 7.283, -37.16079)
+
+[node name="Torch29" parent="Environment/Torches" unique_id=512890292 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.366783, 7.283, -45.987526)
+
+[node name="Torch27" parent="Environment/Torches" unique_id=682140360 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.366783, 7.283, -19.25015)
+
+[node name="Torch30" parent="Environment/Torches" unique_id=1680390756 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.532776, 7.283, -28.116114)
+
+[node name="Torch31" parent="Environment/Torches" unique_id=989497577 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.532776, 7.283, -37.16079)
+
+[node name="Torch32" parent="Environment/Torches" unique_id=1503987844 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.532776, 7.283, -45.987526)
+
+[node name="Torch33" parent="Environment/Torches" unique_id=533617520 instance=ExtResource("19_wnekd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.532776, 7.283, -19.25015)
+
+[node name="Candles" type="Node3D" parent="Environment" unique_id=873690819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.87245, 1.0523682, -2.5876014)
+
+[node name="Candle" parent="Environment/Candles" unique_id=1432907165 instance=ExtResource("20_56s34")]
+
+[node name="Candle2" parent="Environment/Candles" unique_id=972568555 instance=ExtResource("20_56s34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.809546)
+
+[node name="Candle3" parent="Environment/Candles" unique_id=1531704541 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -63.39142, 1, 9.306)
+
+[node name="Candle4" parent="Environment/Candles" unique_id=1992408926 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -56.071354, 1, 9.306)
+
+[node name="Candle5" parent="Environment/Candles" unique_id=1615192170 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -48.908142, 1, 9.306)
+
+[node name="Candle6" parent="Environment/Candles" unique_id=1270423299 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -41.58808, 1, 9.306)
+
+[node name="Candle7" parent="Environment/Candles" unique_id=693995728 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.849724, 1, 9.306)
+
+[node name="Candle8" parent="Environment/Candles" unique_id=414794259 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -26.529663, 1, 9.306)
+
+[node name="Candle9" parent="Environment/Candles" unique_id=585650748 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -19.105022, 1, 9.306)
+
+[node name="Candle10" parent="Environment/Candles" unique_id=723852774 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.784962, 1, 9.306)
+
+[node name="Candle11" parent="Environment/Candles" unique_id=2078613868 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.8374596, 1, 9.306)
+
+[node name="Candle12" parent="Environment/Candles" unique_id=534135656 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.4826012, 1, 9.306)
+
+[node name="Candle13" parent="Environment/Candles" unique_id=422144810 instance=ExtResource("20_56s34")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.593506, 1, 9.306)
 
 [node name="InvisibleWall" type="StaticBody3D" parent="." unique_id=355325522]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05758, 2.40037, 1.5597)
